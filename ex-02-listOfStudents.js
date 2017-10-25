@@ -48,13 +48,8 @@ var studentAgesList = listOfStudents.map(function(item) {
 
 
 var listOfStudentsPlusEmail = listOfStudents.map(function(item) {
-  return {
-    first: item.first,
-    last: item.last,
-    gender: item.gender,
-    age: item.age,
-    email: item.first[0].toLowerCase() + item.last.toLowerCase() + '@happygroup.com'
-  }
+  item.email = item.first[0].toLowerCase() + item.last.toLowerCase() + '@happygroup.com';
+  return item;
 })
 
 
